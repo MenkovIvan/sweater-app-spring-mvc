@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: '2022101801'
+      author: 'Ivan Menkov'
+      changes:
+        - createTable:
+            tableName: 'Message'
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: message_id_pk
+              - column:
+                  name: text
+                  type: varchar(255)
+              - column:
+                  name: tag
+                  type: varchar(255)
